@@ -1,0 +1,12 @@
+@media (min-width: 1025px) {
+    .h-custom {
+    height: 100vh !important;
+    }
+    }
+body{
+    background-color: #8fc4b7;
+    height: 500%;
+}
+b{
+    color: red;
+}

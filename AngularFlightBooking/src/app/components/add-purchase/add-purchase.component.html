@@ -1,0 +1,133 @@
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+    <div class="container-fluid">
+      <a class="navbar-brand" (click)="goToCustomer()">
+        <button type="button" class="btn btn-dark" >Home</button></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggle  r-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page"  (click)="goToOnlyFlight()">Flight List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page"  (click)="goToFlightList()">Flight Booking</a>
+          </li>
+        </ul>
+      </div>
+      <button type="button" class="btn btn-outline-info border-white text-white" style="float: right;" (click)="goToHome()" >LogOut</button>
+    </div>
+  </nav><br><br>
+<!-- <div class="col-md-6 offset-md-3">
+    <h1><b> make a purchase </b></h1>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>Flight Number</label>
+            <input class="form-control" id="no_flight"
+            [(ngModel)]="purchase.no_flight" name="no_flight" placeholder="put here this number :{{ booking.flightNo }}">
+        </div>
+        <br>
+        <div class="form-group">
+            <label>Credit Card Number</label>
+            <input type="number" class="form-control" id="credit_card_num"
+            [(ngModel)]="purchase.credit_card_num" name="credit_card_num"  placeholder="Card n°">
+        </div>
+        <br>
+        <div class="form-group">
+            <label>Date</label>
+            <input type="date" class="form-control" id="date"
+            [(ngModel)]="purchase.date" name="date">
+        </div>
+        <br>
+        <div class="form-group">
+            <label>Amount</label>
+            <input type="number" class="form-control" id="amount"
+            [(ngModel)]="purchase.amount" name="amount" placeholder="the price of the ticket is {{ booking.price }}€">
+        </div>
+        <br>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" class="form-control" id="email"
+            [(ngModel)]="purchase.email" name="email" placeholder="write your e-mail">
+        </div>
+        <br>
+        <div class="form-group">
+            <label>Number of Tickets</label>
+            <input type="number" class="form-control" id="email"
+            [(ngModel)]="purchase.number_of_tickets" name="number_of_tickets" placeholder="number of tickets here">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-success" > Submit </button>
+    </form>
+</div> -->
+
+
+
+
+<section class="h-100 h-custom">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-lg-8 col-xl-6">
+          <div class="card rounded-3">
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img3.webp"
+              class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;"
+              alt="Sample photo">
+            <div class="card-body p-4 p-md-5">
+              <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Make a purchase</h3>
+  
+              <form #Registerform="ngForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label><b>*</b>Flight Number</label>
+                    <input class="form-control" id="no_flight"
+                    required [(ngModel)]="purchase.no_flight" name="no_flight" placeholder="put here this number :{{ booking.flightNo }}">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label><b>*</b> Credit Card Number</label>
+                    <input type="number" class="form-control" id="credit_card_num"
+                    required [(ngModel)]="purchase.credit_card_num" name="credit_card_num"  placeholder="Card n°">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label><b>*</b>Date</label>
+                    <input type="date" class="form-control" id="date"
+                    required [(ngModel)]="purchase.date" name="date">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label><b>*</b>Amount</label>
+                    <input type="number" class="form-control" id="amount"
+                    required [(ngModel)]="purchase.amount" name="amount" placeholder="the price of the ticket is {{ booking.price }}€">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label><b>*</b>Email</label>
+                    <input type="email" class="form-control" id="email"
+                    required [(ngModel)]="purchase.email" name="email" placeholder="write your e-mail">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label><b>*</b>Number of Tickets</label>
+                    <input type="number" class="form-control" id="email"
+                    required [(ngModel)]="purchase.number_of_tickets" name="number_of_tickets" placeholder="number of tickets here">
+                </div>
+                <br>
+                <h2 *ngIf="Registerform.form.invalid"> 
+                  <div class="alert alert-danger" role="alert">
+                  {{ errorMessage }}</div>
+                </h2>
+                <h2 *ngIf="Registerform.form.valid"> 
+                  <div class="alert alert-success" role="alert">
+                  {{ validationMessage }}</div>
+                </h2>
+                <button [disabled]="Registerform.form.invalid" type="submit" class="btn btn-success" > Submit </button>
+            </form>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </body>

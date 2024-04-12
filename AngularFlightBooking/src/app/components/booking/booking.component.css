@@ -1,0 +1,11 @@
+.table{
+    margin-top: 30px;
+}
+th{
+    text-align: center;
+}
+body{
+    background-size: cover;
+    background-image:url('../../../assets/Air5.avif') ;
+    height:900px;
+}

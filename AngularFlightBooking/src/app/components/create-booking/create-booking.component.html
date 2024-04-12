@@ -1,0 +1,138 @@
+<!-- <div class="col-md-6 offset-md-3">
+    <h1><b> Create Booking </b></h1>
+<form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>Airline</label>
+            <input type="text" class="form-control" id="airline"
+            [(ngModel)]="bookings.airline" name="airline">
+        </div>
+        <br>
+        <div class="form-group">
+            <label>Departure Airport</label>
+            <input type="text" class="form-control" id="airport"
+            [(ngModel)]="bookings.airport" name="airport">
+        </div>
+        <br>
+        <div class="form-group">
+            <label>Arrival Airport</label>
+            <input type="text" class="form-control" id="arrivalAirport"
+            [(ngModel)]="bookings.arrivalAirport" name="arrivalAirport">
+        </div>
+        <br>
+        <div class="form-group">
+            <label>Departure Time</label>
+            <input type="text" class="form-control" id="departure"
+            [(ngModel)]="bookings.departure" name="departure">
+        </div>
+        <br>
+        <div class="form-group">
+            <label>Arrival Time</label>
+            <input type="text" class="form-control" id="arrival"
+            [(ngModel)]="bookings.arrival" name="arrival">
+        </div>
+        <br>
+        <div class="form-group">
+            <label>Duration</label>
+            <input type="number" class="form-control" id="duration"
+            [(ngModel)]="bookings.duration" name="duration">
+        </div>
+        <br>
+        <div class="form-group">
+            <label>Price</label>
+            <input type="number" class="form-control" id="price"
+            [(ngModel)]="bookings.price" name="price">
+        </div>
+        <br>
+        <div class="form-group">
+            <label>Flight n°</label>
+            <input type="number" class="form-control" id="flightNo"
+            [(ngModel)]="bookings.flightNo" name="flightNo">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-success" > Submit </button>
+    </form>
+</div> -->
+<!-- --------------------------------------------------------------------------------------------------- -->
+<section class="vh-100 bg-image"
+  style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body p-5">
+              <h2 class="text-uppercase text-center mb-5">Make a Booking</h2>
+
+              <form #Registerform="ngForm" (ngSubmit)="onSubmit()">
+
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="form3Example1cg">Airline</label>
+                  <input type="text"  class="form-control form-control-lg"
+                  id="airline" required [(ngModel)]="bookings.airline" name="airline" />
+                </div>
+
+                <div class="form-group">
+                    <label>Departure Airport</label>
+                    <input type="text" class="form-control" id="airport"
+                    required [(ngModel)]="bookings.airport" name="airport">
+                </div>
+                
+                <div class="form-group">
+                    <label>Arrival Airport</label>
+                    <input type="text" class="form-control" id="arrivalAirport"
+                    required [(ngModel)]="bookings.arrivalAirport" name="arrivalAirport">
+                </div>
+
+                <div class="form-group">
+                    <label>Departure Time</label>
+                    <input type="text" class="form-control" id="departure"
+                    required [(ngModel)]="bookings.departure" name="departure">
+                </div>
+                
+                <div class="form-group">
+                    <label>Arrival Time</label>
+                    <input type="text" class="form-control" id="arrival"
+                    required [(ngModel)]="bookings.arrival" name="arrival">
+                </div>
+                
+                <div class="form-group">
+                    <label>Duration</label>
+                    <input type="number" class="form-control" id="duration"
+                    required [(ngModel)]="bookings.duration" name="duration">
+                </div>
+                
+                <div class="form-group">
+                    <label>Price</label>
+                    <input type="number" class="form-control" id="price"
+                    required [(ngModel)]="bookings.price" name="price">
+                </div>
+                
+                <div class="form-group">
+                    <label>Flight n°</label>
+                    <input type="number" class="form-control" id="flightNo"
+                    required [(ngModel)]="bookings.flightNo" name="flightNo">
+                </div>
+                <h2 *ngIf="Registerform.form.invalid"> 
+                  <div class="alert alert-danger" role="alert">
+                  {{ errorMessage }}</div>
+                </h2>
+                <h2 *ngIf="Registerform.form.valid"> 
+                  <div class="alert alert-success" role="alert">
+                  {{ validationMessage }}</div>
+                </h2>
+                <div class="d-flex justify-content-center">
+                  <button type="submit"
+                    [disabled]="Registerform.invalid" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Submit</button>
+                </div>
+
+                
+
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

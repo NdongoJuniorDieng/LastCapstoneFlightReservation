@@ -1,0 +1,11 @@
+body{
+    background-size: cover;
+    background-image:url('../../../assets/Air11.avif') ;
+    height: 750px;
+}
+p{
+    border: 5px solid white;
+    width: fit-content;
+    margin-top: 60px;
+   margin-left: 200px;
+}

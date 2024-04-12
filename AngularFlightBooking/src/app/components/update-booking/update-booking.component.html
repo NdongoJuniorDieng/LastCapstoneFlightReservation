@@ -1,0 +1,54 @@
+<div class="col-md-6 offset-md-3">
+    <h1><b> Update Booking </b></h1>
+    <form (ngSubmit)="Update()">
+        <div class="form-group">
+            <label>Airline</label>
+            <input type="text" class="form-control" id="airline"
+            [(ngModel)]="booking.airline" name="airline" >
+        </div>
+        <br>
+        <div class="form-group">
+            <label>Departure Airport</label>
+            <input type="text" class="form-control" id="airport"
+            [(ngModel)]="booking.airport" name="airport">
+        </div>
+        <br>
+        <div class="form-group">
+            <label>Arrival Airport</label>
+            <input type="text" class="form-control" id="arrivalAirport"
+            [(ngModel)]="booking.arrivalAirport" name="arrivalAirport">
+        </div>
+        <br>
+        <div class="form-group">
+            <label>Departure Time</label>
+            <input type="text" class="form-control" id="departure"
+            [(ngModel)]="booking.departure" name="departure">
+        </div>
+        <br>
+        <div class="form-group">
+            <label>Arrival Time</label>
+            <input type="text" class="form-control" id="arrival"
+            [(ngModel)]="booking.arrival" name="arrival">
+        </div>
+        <br>
+        <div class="form-group">
+            <label>Duration</label>
+            <input type="number" class="form-control" id="duration"
+            [(ngModel)]="booking.duration" name="duration">
+        </div>
+        <br>
+        <div class="form-group">
+            <label>Price</label>
+            <input type="number" class="form-control" id="price"
+            [(ngModel)]="booking.price" name="price">
+        </div>
+        <br>
+        <div class="form-group">
+            <label>Flight n°</label>
+            <input type="number" class="form-control" id="flight_no"
+            [(ngModel)]="booking.flightNo" name="flight_no">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-success" > Update </button>
+    </form>
+</div>

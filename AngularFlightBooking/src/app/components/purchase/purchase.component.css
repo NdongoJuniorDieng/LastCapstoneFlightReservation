@@ -1,0 +1,9 @@
+h1,th{
+    text-align: center;
+}
+body{
+    background-size: cover;
+    background-image:url('../../../assets/Air6.avif');
+    height:900px;
+}
+

@@ -1,0 +1,9 @@
+body{
+    background-size: cover;
+    background-image:url('../../../assets/Pilot2.avif') ;
+    height:900px;
+}
+h1,th,td{
+    text-align: center;
+    color: beige;
+}

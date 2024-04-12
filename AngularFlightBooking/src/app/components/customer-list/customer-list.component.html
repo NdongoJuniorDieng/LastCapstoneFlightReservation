@@ -1,0 +1,64 @@
+<body>
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <!-- <a class="navbar-brand btn btn-outline-primary" routerLink="customer">Home</a> -->
+      <button type="button" class="btn btn-secondary" style="float: right;" (click)="goToAdmin()" >Home</button>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page"  (click)="goBooking()">Booking List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page"  (click)="goListPurchase()">Purchase List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page"  (click)="goToCustomerList()">Custommer List</a>
+          </li>
+        </ul>
+         </div>
+
+         
+         <form class="d-flex" role="search">
+          <div class="container">
+            <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Search a Customer">
+          </div>
+        </form>
+        
+
+         <button type="button" class="btn btn-outline-danger border-danger" style="float: right;margin-left: 300px;" (click)="goHome()" >LogOut</button>
+    </div>
+  </nav>
+      <br>
+      <h1><b>List Of Custommer</b></h1>
+      <!-- <div class="container">
+        <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Search">
+      </div> -->
+<table class="table table-striped table-info border-info">
+    <thead>
+      <tr>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Birth Day</th>
+        <th scope="col">Phone Number</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let c of customer | filter: searchText">
+        <td>{{ c.firstName }}</td>
+        <td>{{ c.lastName }}</td>
+        <td>{{ c.email }}</td>
+        <td>{{ c.birthDay }}</td>
+        <td>{{c.phoneNumber}}</td>
+        <td>
+            <button (click)="goToUpdateCustomer(c.cust_id)" class="btn btn-info"> UPDATE </button> 
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
